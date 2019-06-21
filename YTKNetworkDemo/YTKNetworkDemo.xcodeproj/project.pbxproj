@@ -17,6 +17,8 @@
 		45BF1D431A0DC40F00DDB7E0 /* GetUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF1D421A0DC40F00DDB7E0 /* GetUserInfoApi.m */; };
 		45BF1D461A0DC66E00DDB7E0 /* GetImageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 45BF1D451A0DC66E00DDB7E0 /* GetImageApi.m */; };
 		45F710841A466D01001957BA /* UploadImageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 45F710831A466D01001957BA /* UploadImageApi.m */; };
+		5B47592E22BCD5A9003A0A64 /* NetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B47592D22BCD5A9003A0A64 /* NetworkRequest.m */; };
+		5B47593022BCD8AA003A0A64 /* omemucoonet.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5B47592F22BCD8AA003A0A64 /* omemucoonet.cer */; };
 		BF007FD919FF972C00816462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF007FD819FF972C00816462 /* main.m */; };
 		BF007FDC19FF972C00816462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF007FDB19FF972C00816462 /* AppDelegate.m */; };
 		BF007FDF19FF972C00816462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF007FDE19FF972C00816462 /* ViewController.m */; };
@@ -57,6 +59,9 @@
 		45F710821A466D01001957BA /* UploadImageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadImageApi.h; sourceTree = "<group>"; };
 		45F710831A466D01001957BA /* UploadImageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadImageApi.m; sourceTree = "<group>"; };
 		573535265CF5ECF05E1BBD90 /* libPods-YTKNetworkDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YTKNetworkDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B47592C22BCD5A9003A0A64 /* NetworkRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkRequest.h; sourceTree = "<group>"; };
+		5B47592D22BCD5A9003A0A64 /* NetworkRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkRequest.m; sourceTree = "<group>"; };
+		5B47592F22BCD8AA003A0A64 /* omemucoonet.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = omemucoonet.cer; sourceTree = "<group>"; };
 		65526970D9E7FB74931FF110 /* Pods-YTKNetworkDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YTKNetworkDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-YTKNetworkDemoTests/Pods-YTKNetworkDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF007FD319FF972C00816462 /* YTKNetworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YTKNetworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF007FD719FF972C00816462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 		BF007FCA19FF972C00816462 = {
 			isa = PBXGroup;
 			children = (
+				5B47592F22BCD8AA003A0A64 /* omemucoonet.cer */,
 				20D2D9691D2687FA009E13A2 /* Accessory */,
 				BF007FD519FF972C00816462 /* YTKNetworkDemo */,
 				BF007FEF19FF972C00816462 /* YTKNetworkDemoTests */,
@@ -157,6 +163,8 @@
 				45BF1D421A0DC40F00DDB7E0 /* GetUserInfoApi.m */,
 				45BF1D441A0DC66E00DDB7E0 /* GetImageApi.h */,
 				45BF1D451A0DC66E00DDB7E0 /* GetImageApi.m */,
+				5B47592C22BCD5A9003A0A64 /* NetworkRequest.h */,
+				5B47592D22BCD5A9003A0A64 /* NetworkRequest.m */,
 				BF007FDA19FF972C00816462 /* AppDelegate.h */,
 				BF007FDB19FF972C00816462 /* AppDelegate.m */,
 				BF007FDD19FF972C00816462 /* ViewController.h */,
@@ -250,7 +258,7 @@
 		BF007FCB19FF972C00816462 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = yuantiku.com;
 				TargetAttributes = {
 					BF007FD219FF972C00816462 = {
@@ -267,6 +275,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -288,6 +297,7 @@
 			files = (
 				BF007FE219FF972C00816462 /* Main.storyboard in Resources */,
 				BF007FE719FF972C00816462 /* LaunchScreen.xib in Resources */,
+				5B47593022BCD8AA003A0A64 /* omemucoonet.cer in Resources */,
 				BF007FE419FF972C00816462 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,6 +360,7 @@
 				20D2D9721D268808009E13A2 /* YTKAnimatingRequestAccessory.m in Sources */,
 				45AB19C11A4656A600680858 /* YTKUrlArgumentsFilter.m in Sources */,
 				45BF1D431A0DC40F00DDB7E0 /* GetUserInfoApi.m in Sources */,
+				5B47592E22BCD5A9003A0A64 /* NetworkRequest.m in Sources */,
 				BF007FDC19FF972C00816462 /* AppDelegate.m in Sources */,
 				45F710841A466D01001957BA /* UploadImageApi.m in Sources */,
 				BF007FD919FF972C00816462 /* main.m in Sources */,
@@ -402,18 +413,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -448,18 +468,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -490,7 +519,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = YTKNetworkDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yuantiku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -504,7 +533,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = YTKNetworkDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yuantiku.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

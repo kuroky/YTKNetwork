@@ -13,12 +13,23 @@
 #import "GetUserInfoApi.h"
 #import "RegisterApi.h"
 #import "YTKBaseRequest+AnimatingAccessory.h"
+#import "NetworkRequest.h"
 
 @interface ViewController ()<YTKChainRequestDelegate>
 
 @end
 
 @implementation ViewController
+
+- (void)sendRequest {
+    NetworkRequest *request = [NetworkRequest new];
+    [request startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"succeed");
+        NSLog(@"data: %@", request.responseString);
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSLog(@"failed");
+    }];
+}
 
 /// Send batch request
 - (void)sendBatchRequest {
@@ -86,6 +97,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self sendRequest];
 }
 
 - (void)didReceiveMemoryWarning {

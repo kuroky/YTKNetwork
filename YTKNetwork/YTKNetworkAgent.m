@@ -62,7 +62,7 @@
     self = [super init];
     if (self) {
         _config = [YTKNetworkConfig sharedConfig];
-        _manager = [[AFHTTPSessionManager alloc] initWithSessionConfiguration:_config.sessionConfiguration];
+        _manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:_config.baseUrl] sessionConfiguration:_config.sessionConfiguration];
         _requestsRecord = [NSMutableDictionary dictionary];
         _processingQueue = dispatch_queue_create("com.yuantiku.networkagent.processing", DISPATCH_QUEUE_CONCURRENT);
         _allStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(100, 500)];
@@ -199,7 +199,7 @@
     NSURLRequest *customUrlRequest= [request buildCustomUrlRequest];
     if (customUrlRequest) {
         __block NSURLSessionDataTask *dataTask = nil;
-        dataTask = [_manager dataTaskWithRequest:customUrlRequest completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        dataTask = [_manager dataTaskWithRequest:customUrlRequest uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
             [self handleRequestResult:dataTask responseObject:responseObject error:error];
         }];
         request.requestTask = dataTask;
@@ -453,11 +453,9 @@
     }
 
     __block NSURLSessionDataTask *dataTask = nil;
-    dataTask = [_manager dataTaskWithRequest:request
-                           completionHandler:^(NSURLResponse * __unused response, id responseObject, NSError *_error) {
-                               [self handleRequestResult:dataTask responseObject:responseObject error:_error];
-                           }];
-
+    dataTask = [_manager dataTaskWithRequest:request uploadProgress:nil downloadProgress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        [self handleRequestResult:dataTask responseObject:responseObject error:error];
+    }];
     return dataTask;
 }
 

@@ -20,21 +20,9 @@
 - (void)setupRequestFilters {
     NSString *appVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     YTKNetworkConfig *config = [YTKNetworkConfig sharedConfig];
-    config.baseUrl = @"https://om.emucoo.net/V2.5/";
-    config.securityPolicy = [self securityPolicy];
+    config.baseUrl = @"https://";
     YTKUrlArgumentsFilter *urlFilter = [YTKUrlArgumentsFilter filterWithArguments:@{@"version": appVersion}];
     [config addUrlFilter:urlFilter];
-}
-
-//MARK:- Https Set
-- (AFSecurityPolicy *)securityPolicy {
-    NSString *cerPath = [[NSBundle mainBundle] pathForResource:@"omemucoonet" ofType:@"cer"];
-    NSData *cerData = [[NSData alloc] initWithContentsOfFile:cerPath];
-    AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate
-                                                withPinnedCertificates:[NSSet setWithObject:cerData]];
-    policy.allowInvalidCertificates = YES; // 是否允许自建证书
-    policy.validatesDomainName = NO; // 是否验证域名
-    return policy;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
